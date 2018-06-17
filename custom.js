@@ -1,7 +1,7 @@
 $(window).on('load', function() {
     
-    var contractAddress = "0x9112f6759f24db5a641d356aaf9053b67e85e79c"; // on Ropsten testnet!
-    //var contractAddress = "0x34cbad93d311e1556c3a5be0cadb98c982bfb829";
+    //var contractAddress = "0x9112f6759f24db5a641d356aaf9053b67e85e79c"; // on Ropsten testnet!
+    var contractAddress = "0xd9d8baf5b20bae90977233caa6778352a4a00cc9";
     /*var contractAbi = [ 
 	{
 		"anonymous": false,
