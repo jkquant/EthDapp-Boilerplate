@@ -2,7 +2,7 @@ $(window).on('load', function() {
     
     //var contractAddress = "0x9112f6759f24db5a641d356aaf9053b67e85e79c"; // on Ropsten testnet!
     var contractAddress = "0x34cbad93d311e1556c3a5be0cadb98c982bfb829";
-    var contractAbi = [ 
+    /*var contractAbi = [ 
 	{
 		"anonymous": false,
 		"inputs": [
@@ -57,8 +57,65 @@ $(window).on('load', function() {
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
+]; */
 
+    
+var contractAbi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newGreeting",
+				"type": "string"
+			}
+		],
+		"name": "setGreeting",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "greeting",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getGreeting",
+		"outputs": [
+			{
+				"name": "g",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "GotGreeting",
+		"type": "event"
+	}
+];
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
     if (typeof web3 !== 'undefined') {
         // Use Mist/MetaMask's provider
