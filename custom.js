@@ -1,7 +1,20 @@
 $(window).on('load', function() {
     
-    var contractAddress = "0x9112f6759f24db5a641d356aaf9053b67e85e79c"; // on Ropsten testnet!
+    //var contractAddress = "0x9112f6759f24db5a641d356aaf9053b67e85e79c"; // on Ropsten testnet!
+    var contractAddress = "0x34cbad93d311e1556c3a5be0cadb98c982bfb829";
     var contractAbi = [
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "GotGreeting",
+		"type": "event"
+	},
 	{
 		"constant": false,
 		"inputs": [
@@ -19,20 +32,6 @@ $(window).on('load', function() {
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "greeting",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "getGreeting",
 		"outputs": [
 			{
@@ -45,16 +44,18 @@ $(window).on('load', function() {
 		"type": "function"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
+		"constant": true,
+		"inputs": [],
+		"name": "greeting",
+		"outputs": [
 			{
-				"indexed": false,
 				"name": "",
 				"type": "string"
 			}
 		],
-		"name": "GotGreeting",
-		"type": "event"
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ];
 
