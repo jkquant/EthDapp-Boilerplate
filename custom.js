@@ -61,6 +61,19 @@ $(window).on('load', function() {
 
     
 var contractAbi = [
+	[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "GotGreeting",
+		"type": "event"
+	},
 	{
 		"constant": false,
 		"inputs": [
@@ -78,20 +91,6 @@ var contractAbi = [
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "greeting",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "getGreeting",
 		"outputs": [
 			{
@@ -104,16 +103,18 @@ var contractAbi = [
 		"type": "function"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
+		"constant": true,
+		"inputs": [],
+		"name": "greeting",
+		"outputs": [
 			{
-				"indexed": false,
 				"name": "",
 				"type": "string"
 			}
 		],
-		"name": "GotGreeting",
-		"type": "event"
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ];
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
